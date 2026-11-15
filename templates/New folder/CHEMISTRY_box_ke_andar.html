@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html>
+	
+	<script>
+		let background_color                         = "#05040A"
+	</script>
+	
+	<head>
+		<title>RJ Projects</title>
+	</head>
+	
+	<body style = "width:1366px ;height :768px">
+			
+		
+		
+		<script>
+			document.body.style.backgroundColor = background_color;
+			
+		</script>
+		<h1 style = "position:relative ; color:#ffffff ;font-family:Century Gothic;text-align:center;font-weight:bold;font-size:50px">JEE WORKOUT ZONE</h1>
+		<div class = "main_heading_box"></div>
+		<style>
+			.main_heading_box{
+				position:relative;
+				width:510px;	
+				height:75px;
+				top:-100px;
+				margin-left :auto;
+				margin-right :auto;
+				box-shadow: 0px 8px 1000px #3274B599;
+				background-color:#7B00FF10;
+				border-radius:10px;
+				font-size:50px;
+				transition: all 0.3s ease
+					}
+			.main_heading_box:hover{
+				background-color:#280A5490
+			
+						}	
+		</style>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------- BACKGROUND ------------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		
+		<!---------------------------------------- STARS TWINKLING ------------------------------------------------------------------------->
+		
+		<script>
+			function creat_star(top,left,size){
+				document.body.insertAdjacentHTML("beforeend",`<div style ="position:absolute ;transform : rotate(45deg); top:${top}px ; left:${left}px ; width:${size}px ; height:${size}px ; background-color:#ffffff ; box-shadow: 0px 0px 60px  #3274B5 ;  "></div>`)
+				}
+			creat_star(60,60,2)
+			
+			
+		</script>	
+		<!---------------------------------------- PLANET WITH RING ------------------------------------------------------------------------>
+		
+		
+		<div style ="position:absolute ; top:50px ; right:100px ; width:200px ; height:200px ; border-radius:50% ; background-color:#201A4090 ; box-shadow: 0px 0px 20px  #3274B5 ;  "></div>
+		
+		<div class = "ring_of_planet" style ="position:absolute ; top:120px ; right:30px ; width:340px ; height:40px ; border-radius:50% ; background-color:#201A4010 ; box-shadow: 0px 0px 10px  #3274B5 ;  "></div>
+		<style>
+			.ring_of_planet{
+				transform : rotate(20deg)
+					}
+					
+		</style>
+		<script>
+		for (let i = 0; i < 12000; i++) {
+		let top = Math.random() * 4320;
+		let left = Math.random() * 7680;
+		let size = Math.random() * 0.1;
+
+		creat_star(top, left, size);
+	}
+		
+		</script>
+		<div class = "ring_ke_unwanted_part_ko_cover_karne_vala_semicircle" style ="position:absolute ; top:50px ; right:100px ; width:200px ; height:200px ; border-radius:50% ; background-color:#201A4090 ; box-shadow: 0px 0px 20px  #3274B5 ;  "></div>
+		<style>
+			.ring_ke_unwanted_part_ko_cover_karne_vala_semicircle{
+			
+					background : conic-gradient(#1B1736 0deg 180deg,transparent 180deg 360deg);
+					transform : rotate(-70deg)	
+					}
+		</style>
+		
+		
+		<!---------------------------------------- MOTION OF RINGS  ------------------------------------------------------------------------>
+		
+		<script>
+		
+		let angle = 1
+		
+		function move_the_ring(){
+			
+			document.getElementsByClassName("ring_of_planet")[0].style.transform = `rotate(${angle}deg)`;
+			
+			document.getElementsByClassName("ring_ke_unwanted_part_ko_cover_karne_vala_semicircle")[0].style.transform = `rotate(${angle +269}deg)`;
+			
+			angle = angle + 1;
+			
+			setTimeout(move_the_ring,10)
+			
+				}
+		
+		setTimeout(move_the_ring,10)
+		
+		</script>
+		
+		
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!--------------------------------------------------------- SCREW FUNCTION ---------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		<script>
+		
+		function screw_making(left,top){
+		
+			document.body.insertAdjacentHTML("beforeend",`
+			
+			<div style = "top:${top}px ; left:${left}px " class = "screw_function_circle"></div>
+			
+			<div style = "top:${top+8}px ; left:${left}px;" class = "screw_function_line"></div>
+			
+			<style>
+			
+			.screw_function_circle{
+				position:absolute;
+				width:20px;
+				height:20px;
+				box-shadow : 0px 0px 10px #ffffff30;
+				border-radius:50px;
+				background-color:#3D3370;
+				
+					}
+					
+			.screw_function_line{
+				position:absolute;
+				width:20px;
+				height:4px;
+				background-color:#000000;
+				transform : rotate(30deg)
+				
+					}
+			
+			</style>
+		
+			`);}
+			
+		
+		</script>
+		
+		<!---------------------------------------- GLOOMING LIGHTING ----------------------------------------------------------------------->
+		
+		<div style ="position:absolute ; top:-200px ; left:-200px ; width:500px ; height:500px ; border-radius:50% ; background-color:#201A4070 ; box-shadow: 0px 0px 100px  #201A40 ;  "></div>
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!------------------------------------------------------------ BACK FUNCTION WITH BACK BUTTON---------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		<div class = "line_1"></div>
+		
+		<div class = "line_2"></div>
+		
+		<div class = "line_3"></div>
+		
+		<style>
+		
+		.line_1{
+			position:absolute;
+			width:60px;
+			height:20px;
+			top:90px;
+			left:135px;
+			background-color:#5F4FAD;
+			border-radius:20px;
+			transition: all 0.5s ease;
+			transform:rotate(35deg);
+			
+				}
+				
+		.line_2{
+			position:absolute;
+			width:60px;
+			height:20px;
+			top:65px;
+			left:135px;
+			background-color:#5F4FAD;
+			border-radius:20px;
+			transition: all 0.5s ease;
+			transform:rotate(-35deg)
+				}
+				
+		.line_3{
+			position:absolute;
+			width:100px;
+			height:20px;
+			top:78px;
+			left:145px;
+			background-color:#5F4FAD;
+			border-radius:20px;
+			transition: all 0.5s ease;
+			
+				}
+				
+		</style>
+		
+		<script>
+		
+		function go_back(){	
+			window.history.back()	
+				}
+		
+		</script>
+		
+		<div onclick = "go_back()" class = "back_button"></div>
+		
+		<style>
+		
+		.back_button{
+			position:absolute;
+			width:200px;
+			height:100px;
+			top:40px;
+			left:100px;
+			background-color:#06050B50;
+			border-radius:20px;
+			transition: all 0.5s ease;
+			box-shadow: 0px 0px 10px #ff0000;
+				}
+				
+		.back_button:hover{
+			background-color:#15112650
+				}
+			
+		</style>
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!---------------------------------------------------- SCREW ------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<script>
+	
+		screw_making(110,50)
+		screw_making(110,110)
+		screw_making(270,50)
+		screw_making(270,110)
+		
+		
+	
+		</script>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------- CHEMISTRY_KI_HEADING_ON_CHEMISTRY_PAGE ------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		<h3 style = "color:#ffffff ; position:absolute ; top:120px ; left:42% ; font-family:Century Gothic ; font-weight:normal ; font-size:50px">CHEMISTRY</h3>
+		
+		<div onclick = "" class = "CHEMISTRY_HEADING"></div>
+		
+		<style>
+		
+		.CHEMISTRY_HEADING{
+			position : absolute;
+			top : 140px;
+			width : 340px;
+			height : 130px;
+			left : 530px;
+			background-color : #0D0B1F10;
+			border-radius:20px;
+			box-shadow:0px 0px 20px #ffffff;
+			transition: all 0.5s ease;
+			z-index:1
+			
+				}
+		.CHEMISTRY_HEADING:hover{
+			background-color:#15112660
+				}
+				
+		</style>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!---------------------------------------------------- SCREW ------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<script>
+		
+		screw_making(540,150)
+		screw_making(840,150)
+		
+		screw_making(540,240)
+		screw_making(840,240)
+		
+	
+		</script>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------- CHEMISTRY_box_ke_andar_ke_boxe_1 : basic questions------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<h3 style = "color:#ffffff ; position:relative ; top:125px ; text-align:center ; font-family:Century Gothic ; font-weight:normal ; font-size:40px">BASIC QUESTIONS <span style = "color:#EEFC00">[ Medium ] </span></h3>
+		
+		<div onclick = "basic_questions_open_page()" class = "basic_question_option_box"></div>
+		
+		<script>
+		
+		function basic_questions_open_page(){
+			
+			window.open("CHEMISTRY_box_ke_andar.html","_self")
+				}
+		
+		</script>
+		
+		<style>
+		
+		.basic_question_option_box{
+			position : relative;
+			top : 20px;
+			width : 1220px;
+			height : 80px;
+			margin-left : auto;
+			margin-right : auto;
+			background-color : #0D0B1F10;
+			border-radius:50px;
+			box-shadow:0px 0px 20px #ffffff;
+			transition: all 0.5s ease;
+			z-index:1
+			
+				}
+		.basic_question_option_box:hover{
+			background-color:#15112660
+				}
+				
+		</style>
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!---------------------------------------------------- SCREW ------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<script>
+	
+		screw_making(117,382)
+		
+		screw_making(1242,382)
+	
+		</script>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------- CHEMISTRY_box_ke_andar_ke_boxes_2 : short notes ------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<h3 style = "color:#ffffff ; position:relative ; top:85px ; text-align:center ; font-family:Century Gothic ; font-weight:normal ; font-size:40px">SHORT NOTES<span style = "color:#EEFC00"> [ Formula Sheets ] </span></h3>
+		
+		<div onclick = "short_notes_open_page_function()" class = "short_notes_optionn_box"></div>
+		
+		<script>
+		
+		function short_notes_open_page_function(){
+			
+			window.open("CHEMISTRY_box_ke_andar.html","_self")
+				}
+		
+		</script>
+		
+		<style>
+		
+		.short_notes_optionn_box{
+			position : relative;
+			top : -20px;
+			width : 1220px;
+			height : 80px;
+			margin-left : auto;
+			margin-right : auto;
+			background-color : #0D0B1F10;
+			border-radius:50px;
+			box-shadow:0px 0px 20px #ffffff;
+			transition: all 0.5s ease;
+			z-index:1
+			
+				}
+		.short_notes_optionn_box:hover{
+			background-color:#15112660
+				}
+				
+		</style>
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!---------------------------------------------------- SCREW ------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<script>
+	
+		screw_making(117,552)
+		
+		screw_making(1242,552)
+	
+		</script>
+		
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------- PHYSICS_box_ke_andar_ke_boxes_3 : selected assiment questions ------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<h3 style = "color:#ffffff ; position:relative ; top:43px ; text-align:center ; font-family:Century Gothic ; font-weight:normal ; font-size:40px">SELECTED MODULE QUESTIONS<span style = "color:#EEFC00"> [ Question No.s ] </span></h3>
+		
+		<div onclick = "" class = "module_questions_option_box"></div>
+		
+		<script>
+		
+		function advance_questions_open_page_function(){
+			
+			window.open("CHEMISTRY_box_ke_andar.html","_self")
+				}
+		
+		</script>
+		
+		<style>
+		
+		.module_questions_option_box{
+			position : relative;
+			top : -60px;
+			width : 1220px;
+			height : 80px;
+			margin-left : auto;
+			margin-right : auto;
+			background-color : #0D0B1F10;
+			border-radius:50px;
+			box-shadow:0px 0px 20px #ffffff;
+			transition: all 0.5s ease;
+			z-index:1
+			
+				}
+		.module_questions_option_box:hover{
+			background-color:#15112660
+				}
+				
+		</style>
+		
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		<!---------------------------------------------------- SCREW ------------------------------------------------------------------------>
+		<!----------------------------------------------------------------------------------------------------------------------------------->
+		
+		
+		<script>
+	
+		screw_making(117,720)
+		
+		screw_making(1242,720)
+	
+		</script>
+		
+		
+		
+		
+	</body>
+</html>

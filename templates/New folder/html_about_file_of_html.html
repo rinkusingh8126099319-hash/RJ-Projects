@@ -1,0 +1,556 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>RJ 3D CITY</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: #050914;
+    font-family: Century Gothic;
+}
+
+#heading {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-shadow: 0 0 15px #0088ff;
+    z-index: 5;
+}
+
+#panel {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    padding: 20px;
+    color: white;
+    background: #101b30dd;
+    border: 1px solid #3274b5;
+    border-radius: 12px;
+    line-height: 30px;
+    z-index: 5;
+}
+
+button {
+    padding: 9px 15px;
+    background: #174b82;
+    border: 1px solid #54aaff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#footer {
+    position: absolute;
+    bottom: 20px;
+    left: 25px;
+    color: #8ba9c9;
+    z-index: 5;
+}
+</style>
+</head>
+
+<body>
+
+<div id="heading">RJ FUTURE CITY</div>
+
+<div id="panel">
+    <b>CITY NAVIGATION</b><br>
+    Left Drag : Rotate<br>
+    Right Drag : Move<br>
+    Scroll : Zoom<br><br>
+    <button onclick="resetCamera()">RESET VIEW</button>
+</div>
+
+<div id="footer">
+    RJ PROJECTS | 3D CITY SIMULATION
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+
+<script>
+
+// ==================================
+// SCENE
+// ==================================
+
+const scene = new THREE.Scene();
+
+scene.background = new THREE.Color("#050914");
+
+scene.fog = new THREE.Fog("#050914", 100, 250);
+
+
+// ==================================
+// CAMERA
+// ==================================
+
+const camera = new THREE.PerspectiveCamera(
+    55,
+    innerWidth / innerHeight,
+    0.1,
+    500
+);
+
+camera.position.set(90, 100, 110);
+
+
+// ==================================
+// RENDERER
+// ==================================
+
+const renderer = new THREE.WebGLRenderer({
+    antialias: false,
+    powerPreference: "low-power"
+});
+
+renderer.setSize(innerWidth, innerHeight);
+
+renderer.setPixelRatio(1);
+
+document.body.appendChild(renderer.domElement);
+
+
+// ==================================
+// CONTROLS
+// ==================================
+
+const controls = new THREE.OrbitControls(
+    camera,
+    renderer.domElement
+);
+
+controls.enableDamping = true;
+
+controls.dampingFactor = 0.06;
+
+controls.minDistance = 20;
+
+controls.maxDistance = 200;
+
+controls.maxPolarAngle = Math.PI / 2.05;
+
+
+// ==================================
+// LIGHTS
+// ==================================
+
+scene.add(
+    new THREE.AmbientLight(0xffffff, 0.8)
+);
+
+const light = new THREE.DirectionalLight(
+    0xffffff, 1
+);
+
+light.position.set(60, 100, 60);
+
+scene.add(light);
+
+
+// ==================================
+// GROUND
+// ==================================
+
+const ground = new THREE.Mesh(
+
+    new THREE.PlaneGeometry(200, 200),
+
+    new THREE.MeshStandardMaterial({
+        color: "#182b30"
+    })
+
+);
+
+ground.rotation.x = -Math.PI / 2;
+
+ground.position.y = -0.2;
+
+scene.add(ground);
+
+
+// ==================================
+// ROAD FUNCTION
+// ==================================
+
+function road(x, z, width, length, rotation = 0) {
+
+    const mesh = new THREE.Mesh(
+
+        new THREE.BoxGeometry(
+            width,
+            0.15,
+            length
+        ),
+
+        new THREE.MeshStandardMaterial({
+            color: "#202c3c"
+        })
+
+    );
+
+    mesh.position.set(x, 0, z);
+
+    mesh.rotation.y = rotation;
+
+    scene.add(mesh);
+
+}
+
+
+// Main roads
+
+road(0, 0, 9, 180);
+
+road(0, 0, 180, 9);
+
+road(40, 0, 7, 180);
+
+road(-40, 0, 7, 180);
+
+road(0, 40, 180, 7);
+
+road(0, -40, 180, 7);
+
+
+// ==================================
+// ROAD LINES
+// ==================================
+
+function roadLine(x, z, width, length) {
+
+    const line = new THREE.Mesh(
+
+        new THREE.BoxGeometry(
+            width,
+            0.03,
+            length
+        ),
+
+        new THREE.MeshBasicMaterial({
+            color: "#e3bd56"
+        })
+
+    );
+
+    line.position.set(x, 0.09, z);
+
+    scene.add(line);
+
+}
+
+for(let z = -85; z < 90; z += 8) {
+    roadLine(0, z, 0.25, 3);
+    roadLine(40, z, 0.25, 3);
+    roadLine(-40, z, 0.25, 3);
+}
+
+for(let x = -85; x < 90; x += 8) {
+    roadLine(x, 0, 3, 0.25);
+    roadLine(x, 40, 3, 0.25);
+    roadLine(x, -40, 3, 0.25);
+}
+
+
+// ==================================
+// BUILDING FUNCTION
+// ==================================
+
+function building(x, z, width, depth, height, color) {
+
+    const geometry = new THREE.BoxGeometry(
+        width,
+        height,
+        depth
+    );
+
+    const material = new THREE.MeshStandardMaterial({
+        color: color,
+        roughness: 0.7
+    });
+
+    const mesh = new THREE.Mesh(
+        geometry,
+        material
+    );
+
+    mesh.position.set(
+        x,
+        height / 2,
+        z
+    );
+
+    mesh.castShadow = false;
+
+    scene.add(mesh);
+
+
+    // Building rooftop
+
+    const roof = new THREE.Mesh(
+
+        new THREE.BoxGeometry(
+            width + 0.3,
+            0.3,
+            depth + 0.3
+        ),
+
+        new THREE.MeshStandardMaterial({
+            color: "#50677d"
+        })
+
+    );
+
+    roof.position.set(
+        x,
+        height + 0.15,
+        z
+    );
+
+    scene.add(roof);
+
+}
+
+
+// ==================================
+// RANDOM CITY
+// ==================================
+
+const buildingColors = [
+    "#315878",
+    "#36506e",
+    "#53677e",
+    "#293d55",
+    "#52627b",
+    "#284c63"
+];
+
+for(let i = 0; i < 110; i++) {
+
+    let x = (Math.random() - 0.5) * 160;
+
+    let z = (Math.random() - 0.5) * 160;
+
+    // Road clearance
+
+    if(
+        Math.abs(x) < 7 ||
+        Math.abs(z) < 7 ||
+        Math.abs(x - 40) < 5 ||
+        Math.abs(x + 40) < 5 ||
+        Math.abs(z - 40) < 5 ||
+        Math.abs(z + 40) < 5
+    ) {
+        continue;
+    }
+
+    const height = 4 + Math.random() * 22;
+
+    const color = buildingColors[
+        Math.floor(Math.random() * buildingColors.length)
+    ];
+
+    building(
+        x,
+        z,
+        4 + Math.random() * 4,
+        4 + Math.random() * 4,
+        height,
+        color
+    );
+
+}
+
+
+// ==================================
+// PARKS
+// ==================================
+
+function park(x, z) {
+
+    const mesh = new THREE.Mesh(
+
+        new THREE.BoxGeometry(22, 0.25, 22),
+
+        new THREE.MeshStandardMaterial({
+            color: "#145b3c"
+        })
+
+    );
+
+    mesh.position.set(x, 0.05, z);
+
+    scene.add(mesh);
+
+}
+
+park(-20, -20);
+
+park(20, 20);
+
+park(-20, 60);
+
+park(60, -20);
+
+
+// ==================================
+// TREES
+// ==================================
+
+function tree(x, z) {
+
+    const trunk = new THREE.Mesh(
+
+        new THREE.CylinderGeometry(
+            0.3, 0.4, 2, 6
+        ),
+
+        new THREE.MeshStandardMaterial({
+            color: "#815432"
+        })
+
+    );
+
+    trunk.position.set(x, 1, z);
+
+    scene.add(trunk);
+
+
+    const leaves = new THREE.Mesh(
+
+        new THREE.ConeGeometry(2, 5, 7),
+
+        new THREE.MeshStandardMaterial({
+            color: "#24a65a"
+        })
+
+    );
+
+    leaves.position.set(x, 4, z);
+
+    scene.add(leaves);
+
+}
+
+for(let i = 0; i < 100; i++) {
+
+    let x = (Math.random() - 0.5) * 18;
+
+    let z = (Math.random() - 0.5) * 18;
+
+    tree(x - 20, z - 20);
+
+    tree(x + 20, z + 20);
+
+}
+
+
+// ==================================
+// STREET LIGHTS
+// ==================================
+
+function streetLight(x, z) {
+
+    const pole = new THREE.Mesh(
+
+        new THREE.CylinderGeometry(
+            0.12, 0.12, 6, 5
+        ),
+
+        new THREE.MeshStandardMaterial({
+            color: "#8599ac"
+        })
+
+    );
+
+    pole.position.set(x, 3, z);
+
+    scene.add(pole);
+
+
+    const bulb = new THREE.Mesh(
+
+        new THREE.SphereGeometry(0.5, 6, 6),
+
+        new THREE.MeshBasicMaterial({
+            color: "#48cfff"
+        })
+
+    );
+
+    bulb.position.set(x, 6.2, z);
+
+    scene.add(bulb);
+
+}
+
+for(let z = -80; z <= 80; z += 20) {
+
+    streetLight(6, z);
+
+    streetLight(-6, z);
+
+}
+
+
+// ==================================
+// RESET CAMERA
+// ==================================
+
+function resetCamera() {
+
+    camera.position.set(90, 100, 110);
+
+    controls.target.set(0, 0, 0);
+
+    controls.update();
+
+}
+
+
+// ==================================
+// ANIMATION
+// ==================================
+
+function animate() {
+
+    requestAnimationFrame(animate);
+
+    controls.update();
+
+    renderer.render(scene, camera);
+
+}
+
+animate();
+
+
+// ==================================
+// RESIZE
+// ==================================
+
+window.addEventListener("resize", () => {
+
+    camera.aspect = innerWidth / innerHeight;
+
+    camera.updateProjectionMatrix();
+
+    renderer.setSize(innerWidth, innerHeight);
+
+});
+
+</script>
+
+</body>
+</html>
