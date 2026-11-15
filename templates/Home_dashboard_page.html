@@ -3,7 +3,6 @@
 <html>
 	<head>
 		<title>home_page</title>
-		<meta name="google-site-verification" content="X-Vyp-SKGrc3ceRpqCxr1d9RSITa7hrqpXwTdI5_uss" />
 	</head>
 	<body style = "height:1200px ; weidth:1366px ; display:flex ; background-color:#0B001F ; justify-content:center ; align-items:center;">
 		<div class = "main_page">
@@ -157,7 +156,7 @@
 			
 			
 			
-			
+			<!------------LINE LOWER TO TOP SELECTING BARS------------>
 			
 			
 			<div class = "line_below_top_selecting_bar">
@@ -165,16 +164,40 @@
 			</div>	
 			<style>
 			.line_below_top_selecting_bar{
-				position:absolute;
+				position:fixed;
 				display:flex;
 				align-items:center;
 				justify-content:center;
 				border-radius:10px;
 				height:1px;
-				width:1066px;
+				width:1016px;
 				top:190px;
-				left:300px;
-				background-color:#170040;
+				left:348px;
+				background-color:#ffffff;
+				z-index:12
+				}
+			
+			</style>
+			
+			<!------------LINE UPEER TO TOP SELECTING BARS------------>
+			
+			
+			<div class = "line_ABOVE_top_selecting_bar">
+				<div></div>
+			</div>	
+			<style>
+			.line_ABOVE_top_selecting_bar{
+				position:fixed;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				border-radius:10px;
+				height:1px;
+				width:1016px;
+				top:120px;
+				left:283px;
+				background-color:#ffffff;
+				z-index:12
 				}
 			
 			</style>
@@ -253,7 +276,7 @@
 			</div>	
 			<style>
 			.top_selecting_bar_names{
-				position:absolute;
+				position:fixed;
 				display:flex;
 				gap:30px;
 				align-items:center;
@@ -263,7 +286,8 @@
 				width:1066px;
 				top:130px;
 				left:300px;
-				background-color:#0B001F;}
+				background-color:none;;
+				z-index:12}
 			
 			</style>
 			
@@ -287,9 +311,10 @@
 					font-family:Century Gothic;
 					justify-content:center;
 					align-items:center;
-					background-color:#0B001F;
+					background-color:none;
 					cursor:pointer;
-					transition:0.3s ease}
+					transition:0.3s ease;
+					}
 					
 				
 					
@@ -297,7 +322,7 @@
 			</div>	
 			<style>
 			.top_selecting_bar_names_ke_upar_ki_hover_lines{
-				position:absolute;
+				position:fixed;
 				display:flex;
 				gap:60px;
 				align-items:center;
@@ -307,7 +332,8 @@
 				width:1066px;
 				top:130px;
 				left:300px;
-				background-color:#0B001F;}
+				background-color:none;
+				z-index:13}
 			
 			</style>
 			
@@ -331,7 +357,7 @@
 					font-family:Century Gothic;
 					justify-content:center;
 					align-items:center;
-					background-color:#0B001F;
+					background-color:none;
 					cursor:pointer;
 					transition:0.3s ease}
 					
@@ -341,7 +367,7 @@
 			</div>	
 			<style>
 			.top_selecting_bar_names_ke_neeche_ki_hover_lines{
-				position:absolute;
+				position:fixed;
 				display:flex;
 				gap:60px;
 				align-items:center;
@@ -351,7 +377,8 @@
 				width:1066px;
 				top:170px;
 				left:300px;
-				background-color:#0B001F;}
+				background-color:none;
+				z-index:13}
 			
 			</style>
 			
@@ -379,7 +406,7 @@
 			.letter_uper_line{
 				display:flex;
 				margin-top:40px;
-				background-color:#0B001F;
+				background-color:none;
 				color:#ffffff;
 				height:50px;
 				width:50px;
@@ -389,6 +416,7 @@
 				font-weight:400;
 				font-family:Century Gothic;
 				animation:move_box 0.5s linear ;
+				z-index:4
 				}
 				
 			.letter_uper_line:nth-child(1){
@@ -617,9 +645,147 @@
 			<!--------------------------------------------------------------------------------->
 			<!--------------------------------------------------------------------------------->
 			
+			<div class = "sidebar_ka_div_jiske_upar_svg_hai" >
 			
+				<svg viewBox = "-10 -10 703 1200">
+				
+					<polygon 
+					
+					points = "-20,37 560,37 692,178 692,1144 -20,1144 "
+					stroke-width = "2"
+					stroke = "#ffffff"
+					fill = "none"
+					
+					/>
+				
+				</svg>
+			
+			</div>
+			
+			<style>
+			
+			.sidebar_ka_div_jiske_upar_svg_hai{
+				position:fixed;
+				display:flex;
+				top:120px;
+				left:0px;
+				font-family:Century Gothic;
+				font-weight:200;
+				font-size:20;
+				justify-content:center;
+				align-items:center;
+				color:#ffffff;
+				width:349px;
+				height:550px;
+				cursor:pointer;
+				background-color:none;
 				
 				
+				transition:0.3s ease;
+				z-index:11;}
+			
+			</style>
+			
+			
+			
+			<!--------------------------------------------------------------------------------->
+			<!--------------------------------------------------------------------------------->
+			<!---------------------------------LOGIN BUTTON ----------------------------------->
+			<!--------------------------------------------------------------------------------->
+			<!--------------------------------------------------------------------------------->
+			
+			<div class = "upper_top_login_button" >
+			
+				Login
+				
+				<div class = "login_button_briting_linig_clipped_area">
+				
+					<div class = "briting_lining_on_login_button"></div>
+				
+				</div>
+			
+			</div>
+			
+			
+			
+			<style>	
+			
+			.upper_top_login_button{
+				overflow:hidden;
+				
+				position:fixed;
+				display:flex;
+				top:40px;
+				left:1200px;
+				font-family:Century Gothic;
+				font-weight:200;
+				font-size:20;
+				justify-content:center;
+				align-items:center;
+				color:#ffffff;
+				width:130px;
+				height:40px;
+				cursor:pointer;
+				background-color:none;
+				border:2px solid #ffffff;
+				border-radius:10px;
+				transition:0.3s ease;
+				z-index:11;
+				
+				}
+				
+			.login_button_briting_linig_clipped_area{
+				overflow:hidden;
+				
+				position:fixed;
+				display:flex;
+				top:40px;
+				left:1200px;
+				clip-path:inset(0 round 10px);
+				justify-content:center;
+				align-items:center;
+				width:130px;
+				height:40px;
+				background-color:none;
+				border:2px solid #ffffff;
+				border-radius:10px;
+				transition:0.3s ease;
+				z-index:10s;
+				
+				}
+				
+			.upper_top_login_button:hover{
+				box-shadow:0px 0px 10px #ffffff;
+				transform:translate(0px,-1px)scale(1.02)}
+				
+			.briting_lining_on_login_button{
+				position:fixed;
+				overflow:hidden;
+				top:-50px;
+				left:1200px;
+				display:flex;
+				margin-top:0px;
+				background-color:#ffffff00;
+				color:#0B001F;
+				height:70px;
+				width:20px;
+				align-items:center;
+				justify-content:center;
+				font-size:70px;
+				font-weight:400;
+				font-family:Century Gothic;
+				box-shadow:40px 70px 20px #ffffff;
+				transform:rotate(30deg);
+				animation:moving_brighting_rod_on_login_box 3s linear 0s infinite;
+				}
+				
+			@keyframes moving_brighting_rod_on_login_box{
+				0%{left:1180px;}
+				
+				100%{left:2200px;}}
+				
+			
+			</style>
 				
 			
 			
