@@ -1,876 +1,723 @@
+
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
-	<head>
-		<title>home_page</title>
-	</head>
-	<body style = "height:1200px ; width:1366px ; display:flex ; background-color:#0B001F ; justify-content:center ; align-items:center;">
-		<div class = "main_page">
-		
-		
-			<!--------------------------------------------------------------------------------->
-			<!-----------------------------------IMAGE PREPARING------------------------------->
-			<!--------------------------------------------------------------------------------->
-			
-			<div class = "logo_image_box_on_upper_ribbon">
-			
-				<img src="../static/RJ_logo_for_upper_ribbon.png" width="50px" height="50px" style = "position:absolute ;  top:5px ; left:0px ;opacity : 0.9">
-			
-			</div>
-			
-			<style>
-				.logo_image_box_on_upper_ribbon{
-					position:fixed;
-					left:15px;
-					top:5px;
-					width:50px;
-					border-radius:0px;
-					height:60px;
-					
-					z-index :5;
-					background-color:none;
-					}
-					
-				
-			</style>
-			
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-			<!---------------------------------hover on image-------------------------------------------->
-			
-			<div class = "logo_image_box_upper_ribbon_ka_hover">
-			
-			</div>
-			
-			<style>
-				.logo_image_box_upper_ribbon_ka_hover{
-					position:fixed;
-					left:15px;
-					top:10px;
-					width:50px;
-					cursor:pointer;
-					background-color:none;
-					height:50px;
-					border:1px solid #ffffff;
-					border-radius:5px;
-					z-index :7;
-					transition:0.2s ease ;
-					z-index:12
-					}
-					
-				.logo_image_box_upper_ribbon_ka_hover:hover{
-				box-shadow:0px 0px 8px #ffffff;
-				}
-				
-				
+    <title>RJ Projects - Home Page</title>
 
-				
-				
-			</style>
-			
-			<!------------------------------upper_heading_background_image----------------------->
-			
-			<div class = "upper_heading_background_track_lines">
-			
-				<svg class = "drawing_board_1_on_upper_heading"></svg>
-			
-			</div>
-			
-			<style>
-				
-				.drawing_board_1_on_upper_heading{
-					position:fixed;
-					top:5px;
-					left:5px;
-					width:1366px;
-					height:60px;
-					background-color:none;
-					z-index:11}
-				
-				.upper_heading_background_image{
-					position:fixed;
-					left:0px;
-					top:0px;
-					height:70px;
-					width:1366px;
-					opacity:1;
-					z-index :5;
-					background-color:#170040
-					}
-			</style>
-			
-			<!-----------------------------------upper_heading----------------------------------->
-			
-			<div class = "top_heading_box">
-				<h1 style = "color:#ffffff ;font-family:Century Gothic ; font-weight:500; text-align:center  ">THE WORKOUT ZONE</h1>
-			</div>	
-			<style>
-			.top_heading_box{
-				position:fixed;
-				display:flex;
-				align-items:center;
-				justify-content:flex-start;
-				padding-left:80px;
-				height:70px;
-				width:1366px;
-				top:0px;
-				left:0px;
-				background-color:none;
-				z-index:2}
-			
-			</style>
-			
-			<!-----------------------------------upper_heading polygon box---------------------->
-			
-			<div class = "upper_heading_polygon_box">
-			
-				<svg  viewBox = "0 0 500 80">
-					
-					<polygon
-					
-						points = "0,-1 0,70 400,70 440,-1"
-						stroke = "#ffffff"
-						stroke-width = "1"
-						fill = "none"
-						style = "filter:drop-shadow(0px 0px 5px #ffffff)"					
-					/>
-					
-				</svg>
-			
-			</div>
-			
-			<style>
-			
-			.upper_heading_polygon_box{
-				position:fixed;
-				height:70px;
-				width:500px;
-				top:0px;
-				left:0px;
-				background-color:none;
-				
-				z-index:2
-				
-				}
-			
-			</style>
-			
-			
-			
-			<!------------LINE LOWER TO TOP SELECTING BARS------------>
-			
-			
-			<div class = "line_below_top_selecting_bar">
-				<div></div>
-			</div>	
-			<style>
-			.line_below_top_selecting_bar{
-				position:fixed;
-				display:flex;
-				align-items:center;
-				justify-content:center;
-				border-radius:10px;
-				height:1px;
-				width:1016px;
-				top:190px;
-				left:361px;
-				background-color:#ffffff;
-				z-index:12
-				}
-			
-			</style>
-			
-			<!------------LINE UPEER TO TOP SELECTING BARS------------>
-			
-			
-			<div class = "line_ABOVE_top_selecting_bar">
-				<div></div>
-			</div>	
-			<style>
-			.line_ABOVE_top_selecting_bar{
-				position:fixed;
-				display:flex;
-				align-items:center;
-				justify-content:center;
-				border-radius:10px;
-				height:1px;
-				width:1016px;
-				top:120px;
-				left:361px;
-				background-color:#ffffff;
-				z-index:12
-				}
-			
-			</style>
-			
-			<!--------------------------TOP SELECTING BAR-------------------------------->
-			
-			<div class = "top_selecting_bar_names">
-				<div class = "secting_bar_tag">Attendence</div>
-				<div class = "secting_bar_tag">fees</div>
-				<div class = "secting_bar_tag">Machines</div>
-				<div class = "secting_bar_tag">Supplements</div>
-				<div class = "secting_bar_tag">Others</div>
-				
-				<style>
-				.secting_bar_tag{
-					position:relative;
-					display:flex;
-					width:150px;
-					height:40px;
-					color:#ffffff;
-					border-radius:40px;
-					font-family:Century Gothic;
-					justify-content:center;
-					align-items:center;
-					background-color:none;
-					cursor:pointer;
-					transition:0.3s ease;
-					z-index:5}
-					
-				.main_page:has(.secting_bar_tag:nth-child(1):hover)
-				.secting_bar_tag_ke_upar_ki_lines:nth-child(1),
-				
-				.main_page:has(.secting_bar_tag:nth-child(1):hover)
-				.secting_bar_tag_ke_neeche_ki_lines:nth-child(1){
-					box-shadow:0px 0px 5px #ffffff;
-					color:#ffffff;
-					background-color:#ffffff}
-					
-				.main_page:has(.secting_bar_tag:nth-child(2):hover)
-				.secting_bar_tag_ke_upar_ki_lines:nth-child(2),
-				
-				.main_page:has(.secting_bar_tag:nth-child(2):hover)
-				.secting_bar_tag_ke_neeche_ki_lines:nth-child(2){
-					box-shadow:0px 0px 5px #ffffff;
-					color:#ffffff;
-					background-color:#ffffff}
-					
-				.main_page:has(.secting_bar_tag:nth-child(3):hover)
-				.secting_bar_tag_ke_upar_ki_lines:nth-child(3),
-				
-				.main_page:has(.secting_bar_tag:nth-child(3):hover)
-				.secting_bar_tag_ke_neeche_ki_lines:nth-child(3){
-					box-shadow:0px 0px 5px #ffffff;
-					color:#ffffff;
-					background-color:#ffffff}
-					
-				.main_page:has(.secting_bar_tag:nth-child(4):hover)
-				.secting_bar_tag_ke_upar_ki_lines:nth-child(4),
-				
-				.main_page:has(.secting_bar_tag:nth-child(4):hover)
-				.secting_bar_tag_ke_neeche_ki_lines:nth-child(4){
-					box-shadow:0px 0px 5px #ffffff;
-					color:#ffffff;
-					background-color:#ffffff}
-					
-				.main_page:has(.secting_bar_tag:nth-child(5):hover)
-				.secting_bar_tag_ke_upar_ki_lines:nth-child(5),
-				
-				.main_page:has(.secting_bar_tag:nth-child(5):hover)
-				.secting_bar_tag_ke_neeche_ki_lines:nth-child(5){
-					box-shadow:0px 0px 5px #ffffff;
-					color:#ffffff;
-					background-color:#ffffff}
-		
-				</style>
-			</div>	
-			<style>
-			.top_selecting_bar_names{
-				position:fixed;
-				display:flex;
-				gap:30px;
-				align-items:center;
-				justify-content:center;
-				border-radius:10px;
-				height:50px;
-				width:1066px;
-				top:130px;
-				left:300px;
-				background-color:none;;
-				z-index:12}
-			
-			</style>
-			
-			<!---top_selecting_bar_names ke UPAR ki lines jo hover effect nikalengi ---->
-			
-			<div class = "top_selecting_bar_names_ke_upar_ki_hover_lines">
-				<div class = "secting_bar_tag_ke_upar_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_upar_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_upar_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_upar_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_upar_ki_lines"></div>
-				
-				<style>
-				
-				.secting_bar_tag_ke_upar_ki_lines{
-					display:flex;
-					width:120px;
-					height:3px;
-					color:#ffffff;
-					border-radius:40px;
-					font-family:Century Gothic;
-					justify-content:center;
-					align-items:center;
-					background-color:none;
-					cursor:pointer;
-					transition:0.3s ease;
-					}
-					
-				
-					
-				</style>
-			</div>	
-			<style>
-			.top_selecting_bar_names_ke_upar_ki_hover_lines{
-				position:fixed;
-				display:flex;
-				gap:60px;
-				align-items:center;
-				justify-content:center;
-				border-radius:10px;
-				height:10px;
-				width:1066px;
-				top:130px;
-				left:300px;
-				background-color:none;
-				z-index:13}
-			
-			</style>
-			
-			
-			<!---top_selecting_bar_names ke NEECHE ki lines jo hover effect nikalengi ---->
-			
-			<div class = "top_selecting_bar_names_ke_neeche_ki_hover_lines">
-				<div class = "secting_bar_tag_ke_neeche_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_neeche_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_neeche_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_neeche_ki_lines"></div>
-				<div class = "secting_bar_tag_ke_neeche_ki_lines"></div>
-				
-				<style>
-				.secting_bar_tag_ke_neeche_ki_lines{
-					display:flex;
-					width:120px;
-					height:3px;
-					color:#ffffff;
-					border-radius:40px;
-					font-family:Century Gothic;
-					justify-content:center;
-					align-items:center;
-					background-color:none;
-					cursor:pointer;
-					transition:0.3s ease}
-					
-				
-					
-				</style>
-			</div>	
-			<style>
-			.top_selecting_bar_names_ke_neeche_ki_hover_lines{
-				position:fixed;
-				display:flex;
-				gap:60px;
-				align-items:center;
-				justify-content:center;
-				border-radius:10px;
-				height:10px;
-				width:1066px;
-				top:170px;
-				left:300px;
-				background-color:none;
-				z-index:13}
-			
-			</style>
-			
-			
-			<!--------------------------------------------------------------------------------->
-			<!------------------------WELCOME SCREEN ANIMATION--------------------------------->
-			<!--------------------------------------------------------------------------------->
-			
-			
-			<div class = "welcome_screen_box">
-				<div class = "letter_uper_line">W</div>
-				<div class = "letter_uper_line">E</div>
-				<div class = "letter_uper_line">L</div>
-				<div class = "letter_uper_line">C</div>
-				<div class = "letter_uper_line">O</div>
-				<div class = "letter_uper_line">M</div>
-				<div class = "letter_uper_line">E</div>
-				
-				<div class = "letter_uper_line">!</div>
-				
-				
-			
-			</div>
-			<style>
-			.letter_uper_line{
-				display:flex;
-				margin-top:40px;
-				background-color:none;
-				color:#ffffff;
-				height:50px;
-				width:50px;
-				align-items:center;
-				justify-content:center;
-				font-size:50px;
-				font-weight:400;
-				font-family:Century Gothic;
-				animation:move_box 0.5s linear ;
-				z-index:4
-				}
-				
-			.letter_uper_line:nth-child(1){
-				animation-delay:0s}
-				
-			.letter_uper_line:nth-child(2){
-				animation-delay:0.1s}
-				
-			.letter_uper_line:nth-child(3){
-				animation-delay:0.2s}
-				
-			.letter_uper_line:nth-child(4){
-				animation-delay:0.3s}
-				
-			.letter_uper_line:nth-child(5){
-				animation-delay:0.4s}
-				
-			.letter_uper_line:nth-child(6){
-				animation-delay:0.5s}
-				
-			.letter_uper_line:nth-child(7){
-				animation-delay:0.6s}
-				
-			.letter_uper_line:nth-child(8){
-				animation-delay:0.7s}
-				
-			
-				
-			@keyframes move_box{
-				0%{margin-top:180px}
-				
-				50%{margin-top:30px}
-				
-				70%{margin-top:80px;font-size:100px;font-weight:800;}
-				
-				100%{margin-top:40px;font-size:50px;font-weight:400;}}
-			
-			.welcome_screen_box{
-				display:flex;
-				gap:10px;
-				flex-direction:row;
-				position:absolute;
-				width:600px;
-				height:120px;
-				background-color:#0B001F;
-				top:200px;
-				justify-content:center;
-				left:550px}
-			</style>
-			
-			<!-----NEECHE ROOT BOLNA--------->
-			
-			<div class = "calling_root">
-			
-				<div class = "letter_neeche_line">C</div>
-				<div class = "letter_neeche_line">M</div>
-				<div class = "letter_neeche_line">D</div>
-				<div class = "letter_neeche_line">R</div>
-				
-			</div>
-			
-			
-			<style>
-			
-			.letter_neeche_line{
-				display:flex;
-				margin-top:-10px;
-				background-color:#0B001F;
-				color:#0B001F;
-				height:50px;
-				width:50px;
-				align-items:center;
-				justify-content:center;
-				font-size:70px;
-				font-weight:400;
-				font-family:Century Gothic;
-				animation:move_box_down 0.3s linear 1s forwards;
-				
-				}
-				
-			@keyframes move_box_down{
-				0%{margin-top:-130px;color:#F7FF00;font-weight:400}
-				
-				80%{margin-top:30px;color:#F7FF00;font-weight:800}
-				
-				100%{margin-top:-10px;color:#F7FF00;font-weight:400}
-				
-				}
-			
-				
-				
-			.calling_root{
-				display:flex;
-				gap:10px;
-				flex-direction:row;
-				position:absolute;
-				width:600px;
-				height:100px;
-				background-color:#0B001F;
-				top:340px;
-				justify-content:center;
-				left:550px
-				
-				}
-			</style>
-			
-			<!--------------------------------------------------------------------------------->
-			<!------------------------LETS START BUTTON ANIMATION------------------------------>
-			<!--------------------------------------------------------------------------------->
-			
-			<div onclick = "hide_welcome_and_cmdr_with_button()"class = "start_button">LET'S START
-			
-				<div class = "briting_lining"></div>
-			
-			</div>
-			
-			<style>
-			.start_button{
-				display:flex;
-				overflow:hidden;
-				gap:10px;
-				flex-direction:row;
-				position:absolute;
-				width:250px;
-				cursor:pointer;
-				height:80px;
-				border-radius:20px;
-				background-color:none;
-				color:#ffffff;
-				font-family:Century Gothic;
-				align-items:center;
-				top:970px;
-				opacity:0;
-				justify-content:center;
-				left:725px;
-				border:1px solid #ffffff;
-				transition:0.3s ease;
-				animation:let_start_button_animation 0.1s linear 1.5s forwards;
-				z-index :5
-				}
-				
-			@keyframes let_start_button_animation{
-				0%{top:670px}
-				
-				100%{top:470px;opacity:100;}
-			
-				}
-				
-			.start_button:hover{
-				box-shadow:0px 0px 9px #ffffff;
-				transform:translate(0px , -2px)scale(1.02)}
-				
-			.briting_lining{
-				position:absolute;
-				left:300px;
-				display:flex;
-				margin-top:-190px;
-				background-color:#ffffff00;
-				color:#0B001F;
-				height:155px;
-				width:20px;
-				align-items:center;
-				justify-content:center;
-				font-size:70px;
-				font-weight:400;
-				font-family:Century Gothic;
-				box-shadow:40px 70px 20px #ffffff90;
-				transform:rotate(30deg);
-				animation:moving_brighting_rod 3s linear 0s infinite;
-				}
-				
-			@keyframes moving_brighting_rod{
-				0%{left:-55px;}
-				
-				30%{left:300px;}}
-			</style>
-			
-			
-			
-			<!--------------------------------------------------------------------------------->
-			<!-----------------------------------IMAGE PREPARING------------------------------->
-			<!--------------------------------------------------------------------------------->
-			
-			<div class = "logo_image_box">
-			
-				<img src = "../static/RJ_Techs_logo.png" width = "650px" height = "550px" />
-			
-			</div>
-			
-			<style>
-				.logo_image_box{
-					position:fixed;
-					left:395px;
-					top:130px;
-					width:600px;
-					height:500px;
-					opacity:0.03;
-					z-index :4
-					}
-			</style>
-			
-			<!---------------------BACKGROUND IMAGE OF WEBSITE PAGE------------------>
-			
-			<div class = "BACKGROUND_image_box">
-			
-				<img src="../static/background_of_website_page.png" width = "1366px" height = "1200px" />
-			
-			</div>
-			
-			<style>
-				.BACKGROUND_image_box{
-					position:fixed;
-					left:0px;
-					top:0px;
-					width:1366px;
-					height:1200px;
-					opacity:0.15;
-					z-index :1
-					}
-			</style>
-			
-			
-			<!--------------------------------------------------------------------------------->
-			<!--------------------------------------------------------------------------------->
-			<!---------------------------------LEFT SIDE BAR----------------------------------->
-			<!--------------------------------------------------------------------------------->
-			<!--------------------------------------------------------------------------------->
-			
-			<div class = "sidebar_ka_div_jiske_upar_svg_hai" >
-				
-				<svg style = "position : fixed" viewBox = "-10 -3 1366 1200">
-			
-					<polygon 
-					
-					points = " 0,170 50,120 349,120 349,620 299,670 0,670 "
-					stroke-width = "1"
-					stroke = "#ffffff"
-					fill = "none"
-				
-					/>
-					
-				</svg>
-				
-			<style>
-			
-			
-			
-			</style>
-			
-			</div>
-			
-			
-			
-			
-			<!--------------------------------------------------------------------------------->
-			<!--------------------------------------------------------------------------------->
-			<!---------------------------------LOGIN BUTTON ----------------------------------->
-			<!--------------------------------------------------------------------------------->
-			<!--------------------------------------------------------------------------------->
-			
-			
-			<script>
-			
-				function open_the_login_page(){
-			
-				window.open("/login_page.html","_self")
-				}
-			
-			</script>
-			
-			<div onclick = "open_the_login_page()" class = "upper_top_login_button" >
-			
-				Login
-				
-				<div class = "login_button_briting_linig_clipped_area">
-				
-					<div class = "briting_lining_on_login_button"></div>
-				
-				</div>
-			
-			</div>
-			
-			
-			
-			<style>	
-			
-			.upper_top_login_button{
-				overflow:hidden;
-				
-				position:fixed;
-				display:flex;
-				top:40px;
-				left:1200px;
-				font-family:Century Gothic;
-				font-weight:200;
-				font-size:18px;
-				justify-content:center;
-				align-items:center;
-				color:#ffffff;
-				width:130px;
-				height:40px;
-				cursor:pointer;
-				background-color:none;
-				border:2px solid #ffffff;
-				border-radius:10px;
-				transition:0.3s ease;
-				z-index:11;
-				
-				}
-				
-			.login_button_briting_linig_clipped_area{
-				overflow:hidden;
-				
-				position:fixed;
-				display:flex;
-				top:40px;
-				left:1200px;
-				clip-path:inset(0 round 10px);
-				justify-content:center;
-				align-items:center;
-				width:130px;
-				height:40px;
-				background-color:none;
-				border:2px solid #ffffff;
-				border-radius:10px;
-				transition:0.3s ease;
-				z-index:10s;
-				
-				}
-				
-			.upper_top_login_button:hover{
-				box-shadow:0px 0px 10px #ffffff;
-				transform:translate(0px,-1px)scale(1.02)}
-				
-			.briting_lining_on_login_button{
-				position:fixed;
-				overflow:hidden;
-				top:-50px;
-				left:1200px;
-				display:flex;
-				margin-top:0px;
-				background-color:#ffffff00;
-				color:#0B001F;
-				height:70px;
-				width:20px;
-				align-items:center;
-				justify-content:center;
-				font-size:70px;
-				font-weight:400;
-				font-family:Century Gothic;
-				box-shadow:40px 70px 20px #ffffff;
-				transform:rotate(30deg);
-				animation:moving_brighting_rod_on_login_box 3s linear 0s infinite;
-				}
-				
-			@keyframes moving_brighting_rod_on_login_box{
-				0%{left:1180px;}
-				
-				100%{left:2200px;}}
-				
-			
-			</style>
-				
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-		</div>
-		<style>
-		.main_page{
-			position:absolute;
-			top:0px;
-			width:1366px;
-			height:1200px;
-			background-color:#0B001F}
-		</style>
-		
-		<!--------------------------------------------------------------------------------->
-		<!------------------------HIDING WELCOME AND CMDR WITH BUTTON---------------------->
-		<!--------------------------------------------------------------------------------->
-		
-		<script>
-			
-			function hide_welcome_and_cmdr_with_button(){
-				
-				
-				let start_button_box = document.querySelector(".start_button");
-				
-				start_button_box.style.animation = "hiding_welcome_and_cmdr 0.5s linear 0s forwards"
-				
-				
-				
-				let welcome_hiding_button_box = document.querySelector(".welcome_screen_box");
-				
-				welcome_hiding_button_box.style.animation = "hiding_welcome_box 0.15s linear 0.5s forwards"
-				
-				
-				
-				let cmdr_hiding_button_box = document.querySelector(".calling_root");
-				
-				cmdr_hiding_button_box.style.animation = "hiding_cmdr_box 0.15s linear 0.7s forwards"
-				
-				
-				
-				
-				}
-			
-		</script>
-		
-		<!------------------------HIDING WELCOME AND CMDR WITH KEYFRAMES------------------->
-		
-		<style>
-		
-		@keyframes hiding_welcome_and_cmdr{
-		
-			0%{top:470px;opacity:1}
-			
-			20%{top:440px;opacity:0.5}
-			
-			100%{top:970px;opacity:0}
-			
-				}
-				
-		@keyframes hiding_welcome_box{
-		
-			0%{margin-top:0px;opacity:1}
-			
-			100%{margin-top:50px;opacity:0}
-			
-				}
-				
-		@keyframes hiding_cmdr_box{
-		
-			0%{opacity:1}
-			
-			100%{opacity:0}
-			
-				}
-		
-		</style>
-	
-		
-		
-		
-		
-		
-		
-	</body>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: #0B001F;
+            color: white;
+            font-family: "Century Gothic", Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+
+        /* MAIN PAGE */
+
+        .main_page {
+            width: 100%;
+            min-height: 100vh;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+
+        /* BACKGROUND IMAGES */
+
+        .BACKGROUND_image_box {
+            position: absolute;
+            inset: 0;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        .BACKGROUND_image_box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.15;
+        }
+
+        .logo_image_box {
+            position: absolute;
+            width: min(600px, 80%);
+            aspect-ratio: 6 / 5;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0.03;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .logo_image_box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+
+        /* TOP HEADER */
+
+        .top_header {
+            width: 100%;
+            min-height: 75px;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            background-color: #170040;
+            border-bottom: 1px solid #ffffff50;
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo_heading {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            min-width: 0;
+        }
+
+        .logo_image {
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 3px;
+            transition: 0.3s ease;
+        }
+
+        .logo_image:hover {
+            box-shadow: 0 0 8px white;
+        }
+
+        .logo_image img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .top_heading_box {
+            min-width: 0;
+            border-bottom: 1px solid white;
+            padding: 5px 15px;
+            border-radius: 0 0 20px 0;
+        }
+
+        .top_heading_box h1 {
+            font-size: clamp(16px, 2.5vw, 27px);
+            font-weight: 500;
+            letter-spacing: 2px;
+        }
+
+
+        /* LOGIN BUTTON */
+
+        .upper_top_login_button {
+            width: 130px;
+            min-height: 40px;
+            flex-shrink: 0;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border: 2px solid white;
+            border-radius: 10px;
+
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+
+            position: relative;
+            overflow: hidden;
+            transition: 0.3s ease;
+        }
+
+        .upper_top_login_button::before {
+            content: "";
+            position: absolute;
+            width: 15px;
+            height: 100px;
+            top: -30px;
+            left: -40px;
+            background: #ffffff90;
+            box-shadow: 0 0 20px white;
+            transform: rotate(30deg);
+            animation: login_light 3s linear infinite;
+        }
+
+        .upper_top_login_button:hover {
+            box-shadow: 0 0 10px white;
+            transform: translateY(-2px);
+        }
+
+        .upper_top_login_button span {
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes login_light {
+            0% {
+                left: -40px;
+            }
+
+            100% {
+                left: 200px;
+            }
+        }
+
+
+        /* NAVIGATION BAR */
+
+        .navigation_section {
+            width: 100%;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 5;
+        }
+
+        .top_selecting_bar_names {
+            width: min(100%, 1000px);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 10px;
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+        }
+
+        .secting_bar_tag {
+            flex: 1 1 130px;
+            min-height: 40px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.3s ease;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .secting_bar_tag::before,
+        .secting_bar_tag::after {
+            content: "";
+            position: absolute;
+            width: 65%;
+            height: 2px;
+            left: 17.5%;
+            background: white;
+            opacity: 0;
+            box-shadow: 0 0 7px white;
+            transition: 0.3s ease;
+        }
+
+        .secting_bar_tag::before {
+            top: 0;
+        }
+
+        .secting_bar_tag::after {
+            bottom: 0;
+        }
+
+        .secting_bar_tag:hover {
+            text-shadow: 0 0 8px white;
+            background-color: #ffffff12;
+        }
+
+        .secting_bar_tag:hover::before,
+        .secting_bar_tag:hover::after {
+            opacity: 1;
+        }
+
+
+        /* WELCOME SECTION */
+
+        .welcome_area {
+            width: 100%;
+            flex: 1;
+            min-height: 450px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+
+            padding: 40px 15px;
+            position: relative;
+        }
+
+
+        /* WELCOME LETTERS */
+
+        .welcome_screen_box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: clamp(2px, 1vw, 10px);
+        }
+
+        .letter_uper_line {
+            width: clamp(25px, 5vw, 55px);
+            height: 65px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+            font-size: clamp(25px, 5vw, 50px);
+            font-weight: 400;
+
+            animation: move_box 0.5s linear backwards;
+        }
+
+        .letter_uper_line:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .letter_uper_line:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .letter_uper_line:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .letter_uper_line:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .letter_uper_line:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        .letter_uper_line:nth-child(6) {
+            animation-delay: 0.5s;
+        }
+
+        .letter_uper_line:nth-child(7) {
+            animation-delay: 0.6s;
+        }
+
+        .letter_uper_line:nth-child(8) {
+            animation-delay: 0.7s;
+        }
+
+        @keyframes move_box {
+
+            0% {
+                transform: translateY(-130px);
+                opacity: 0;
+            }
+
+            50% {
+                transform: translateY(30px);
+                font-size: clamp(35px, 7vw, 75px);
+            }
+
+            70% {
+                transform: translateY(-10px);
+                font-weight: 800;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        /* CMDR TEXT */
+
+        .calling_root {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .letter_neeche_line {
+            width: clamp(30px, 5vw, 55px);
+            height: 65px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            color: #F7FF00;
+            font-size: clamp(35px, 7vw, 70px);
+            font-weight: 400;
+
+            animation: move_box_down 0.5s linear 0.8s backwards;
+        }
+
+        @keyframes move_box_down {
+
+            0% {
+                transform: translateY(-100px);
+                opacity: 0;
+            }
+
+            80% {
+                transform: translateY(15px);
+                font-weight: 800;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+
+        /* START BUTTON */
+
+        .start_button {
+            width: 250px;
+            max-width: 90%;
+            height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+
+            border: 1px solid white;
+            border-radius: 20px;
+
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+
+            opacity: 0;
+            animation: let_start_button_animation 0.5s ease 1.5s forwards;
+            transition: 0.3s ease;
+        }
+
+        @keyframes let_start_button_animation {
+
+            0% {
+                transform: translateY(80px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .start_button:hover {
+            box-shadow: 0 0 9px white;
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        .briting_lining {
+            position: absolute;
+            width: 20px;
+            height: 155px;
+            top: -40px;
+            left: -50px;
+
+            background: #ffffff00;
+            box-shadow: 40px 70px 20px #ffffff90;
+            transform: rotate(30deg);
+
+            animation: moving_brighting_rod 3s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes moving_brighting_rod {
+
+            0% {
+                left: -55px;
+            }
+
+            30% {
+                left: 300px;
+            }
+
+            100% {
+                left: 300px;
+            }
+        }
+
+
+        /* START BUTTON HIDE ANIMATION */
+
+        .hide_welcome {
+            animation: hiding_welcome 0.4s ease forwards;
+        }
+
+        @keyframes hiding_welcome {
+            to {
+                opacity: 0;
+                transform: translateY(-40px);
+                visibility: hidden;
+            }
+        }
+
+
+        /* RESPONSIVE DESIGN */
+
+        @media (max-width: 650px) {
+
+            .top_header {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .logo_heading {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .upper_top_login_button {
+                width: 110px;
+            }
+
+            .top_selecting_bar_names {
+                gap: 5px;
+            }
+
+            .secting_bar_tag {
+                flex: 1 1 110px;
+                font-size: 13px;
+            }
+
+            .welcome_area {
+                min-height: 400px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .top_heading_box h1 {
+                letter-spacing: 1px;
+                font-size: 15px;
+            }
+
+            .logo_image {
+                width: 42px;
+                height: 42px;
+            }
+
+            .secting_bar_tag {
+                flex-basis: 100%;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+<div class="main_page">
+
+
+    <!-- BACKGROUND IMAGE -->
+
+    <div class="BACKGROUND_image_box">
+
+        <img src="../static/background_of_website_page.png"
+             alt="Website background">
+
+    </div>
+
+
+    <!-- WATERMARK LOGO -->
+
+    <div class="logo_image_box">
+
+        <img src="../static/RJ_Techs_logo.png"
+             alt="RJ Technologies logo">
+
+    </div>
+
+
+    <!-- TOP HEADER -->
+
+    <header class="top_header">
+
+
+        <!-- LOGO AND HEADING -->
+
+        <div class="logo_heading">
+
+            <div class="logo_image">
+
+                <img src="../static/RJ_logo_for_upper_ribbon.png"
+                     alt="RJ Logo">
+
+            </div>
+
+
+            <div class="top_heading_box">
+
+                <h1>THE WORKOUT ZONE</h1>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOGIN BUTTON -->
+
+        <div class="upper_top_login_button"
+             onclick="open_the_login_page()">
+
+            <span>Login</span>
+
+        </div>
+
+
+    </header>
+
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="navigation_section">
+
+        <div class="top_selecting_bar_names">
+
+            <div class="secting_bar_tag">
+                Attendance
+            </div>
+
+            <div class="secting_bar_tag">
+                Fees
+            </div>
+
+            <div class="secting_bar_tag">
+                Machines
+            </div>
+
+            <div class="secting_bar_tag">
+                Supplements
+            </div>
+
+            <div class="secting_bar_tag">
+                Others
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- WELCOME SECTION -->
+
+    <main class="welcome_area" id="welcome_area">
+
+
+        <!-- WELCOME TEXT -->
+
+        <div class="welcome_screen_box">
+
+            <div class="letter_uper_line">W</div>
+            <div class="letter_uper_line">E</div>
+            <div class="letter_uper_line">L</div>
+            <div class="letter_uper_line">C</div>
+            <div class="letter_uper_line">O</div>
+            <div class="letter_uper_line">M</div>
+            <div class="letter_uper_line">E</div>
+            <div class="letter_uper_line">!</div>
+
+        </div>
+
+
+        <!-- CMDR TEXT -->
+
+        <div class="calling_root">
+
+            <div class="letter_neeche_line">C</div>
+            <div class="letter_neeche_line">M</div>
+            <div class="letter_neeche_line">D</div>
+            <div class="letter_neeche_line">R</div>
+
+        </div>
+
+
+        <!-- START BUTTON -->
+
+        <div class="start_button"
+             onclick="hide_welcome_and_cmdr_with_button()">
+
+            LET'S START
+
+            <div class="briting_lining"></div>
+
+        </div>
+
+
+    </main>
+
+
+</div>
+
+
+<script>
+
+    /* OPEN LOGIN PAGE */
+
+    function open_the_login_page() {
+
+        window.open("/login_page.html", "_self");
+
+    }
+
+
+    /* HIDE WELCOME SECTION */
+
+    function hide_welcome_and_cmdr_with_button() {
+
+        const welcomeArea =
+            document.querySelector(".welcome_area");
+
+        welcomeArea.classList.add("hide_welcome");
+
+    }
+
+</script>
+
+
+</body>
 
 </html>
